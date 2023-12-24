@@ -18,7 +18,7 @@ const MobileNav = () => {
             alt="Menu"
             width={24}
             height={24}
-            className="cursor-pointer"
+            className="cursor-pointer hover:scale-125 transition-all"
           />
         </SheetTrigger>
         <SheetContent className="flex flex-col gap-6 bg-white md:hidden">
@@ -27,6 +27,7 @@ const MobileNav = () => {
             alt="logo"
             width={128}
             height={38}
+            className="hover:scale-110 transition-all"
           />
           <Separator className="border border-gray-50" />
           <NavItems />

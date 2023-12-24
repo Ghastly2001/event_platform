@@ -16,7 +16,9 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
   const userId = sessionClaims?.userId as StringValidation;
   const isEventCreator = userId === event.organizer._id.toString();
   return (
-    <div className="group relative flex min-h-[380px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all hover: shadow-lg md:min-h-[438px]">
+    <div
+      className="group relative flex min-h-[380px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all hover: shadow-lg md:min-h-[438px] hover:scale-105"
+    >
       <Link
         href={`/events/${event._id}`}
         style={{ backgroundImage: `url(${event.imageUrl})` }}
@@ -53,9 +55,9 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
           {formatDateTime(event.startDateTime).dateTime}
         </p>
         <Link href={`/events/${event._id}`}>
-        <p className="p-medium-16 md:p-medium-20 line-clamp-2 flex-1 text-black">
-          {event.title}
-        </p>
+          <p className="p-medium-16 md:p-medium-20 line-clamp-2 flex-1 text-black">
+            {event.title}
+          </p>
         </Link>
 
         <div className="flex-between w-full">

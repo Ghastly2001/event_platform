@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className="w-full border-b">
         <div className="wrapper flex items-center justify-between">
-            <Link href="/" className="w-36"><Image src='/assets/images/logo.svg' width={128} height={38} alt="Evently Logo" /></Link>
+            <Link href="/" className="w-36 hover:scale-110 transition-all"><Image src='/assets/images/logo.svg' width={128} height={38} alt="Evently Logo" /></Link>
 
             <SignedIn>
                 <nav className="md:flex-between hidden w-full max-w-xs">
@@ -19,11 +19,11 @@ const Header = () => {
 
             <div className="flex w-32 justify-end gap-3">
                 <SignedIn>
-                    <UserButton afterSignOutUrl="/" />
+                    <UserButton afterSignOutUrl="/"/>
                     <MobileNav/>
                 </SignedIn>
                 <SignedOut>
-                    <Button asChild className="rounded-full" size='lg'>
+                    <Button asChild className="rounded-full hover:scale-110 transition-all" size='lg'>
                         <Link href='/sign-in'>
                             Login
                         </Link>

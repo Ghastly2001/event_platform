@@ -287,10 +287,10 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
                 <FormControl>
                   <div className="flex-center h-[54px] w-full overflow-hidden rounded-full bg-grey-50 px-4 py-2">
                     <Image
-                      src="/assets/icons/dollar.svg"
-                      alt="dollar"
-                      width={24}
-                      height={24}
+                      src="/assets/icons/ruppee.svg"
+                      alt="ruppee"
+                      width={15}
+                      height={15}
                       className="filter-grey"
                     />
                     <Input
@@ -361,7 +361,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
           type="submit"
           size="lg"
           disabled={form.formState.isSubmitting}
-          className="button col-span-2 w-full"
+          className="button col-span-2 w-full hover:scale-100"
         >
           {form.formState.isSubmitting ? "Submitting..." : `${type} Event `}
         </Button>
