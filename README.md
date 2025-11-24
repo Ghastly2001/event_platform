@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Events Booking Platform – Next.js Event Ticketing and Reservation System
 
-## Getting Started
+This project is a full-featured event booking platform that allows users to browse trending events, purchase tickets, reserve seats or time slots, and manage bookings through a modern and responsive interface. Administrators can create and manage events, upload images, configure schedules, and oversee all bookings. The system supports secure payments through Stripe and integrates authentication and data validation for a production-ready experience.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The platform is built with a modular architecture that supports real-time data handling, secure payment workflows, and efficient event management. Users can authenticate, explore available events, view event details, choose available dates or slots, and purchase tickets through a streamlined checkout experience. Admin users have dedicated access to create events, update information, manage bookings, and analyze engagement.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Designed to resemble a modern ticketing system, this project showcases how to build a scalable and maintainable event reservation platform using Next.js, TypeScript, and a cloud-based backend.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+### User-Facing Functionality
+- Browse all available events with filtering and sorting.
+- View detailed event information including date, time, description, venue, and pricing.
+- Choose available time slots or ticket categories.
+- Add tickets to the cart and complete payment through a secure checkout flow.
+- Receive confirmation upon successful booking.
+- Manage bookings through a personal dashboard.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Admin Dashboard
+- Create new events with images, descriptions, location details, and pricing.
+- Configure event dates, time slots, capacity limits, and ticket categories.
+- Update existing events with full version control.
+- View all bookings and monitor sales performance.
+- Manage attendees and event status.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Payments and Billing
+- Fully integrated payments using Stripe.
+- Real-time checkout with automatic ticket validation.
+- Secure payment intent creation and processing.
+- Transaction and receipt management.
 
-## Deploy on Vercel
+### Authentication and User Accounts
+- Secure user authentication using an identity provider.
+- Protected routes and dashboards for both users and admins.
+- Automated webhook handling for account sync when required.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Booking Logic
+- Seat or slot availability validation.
+- Prevention of overbooking through server-side checks.
+- Persistent booking records stored in MongoDB.
+- Confirmation page with booking details and metadata.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### File Upload and Media Handling
+- Image upload interface for banners and event posters.
+- Optimized image storage for stable performance.
+- Drag-and-drop upload experience for administrators.
+
+### UI/UX
+- Fully responsive interface for all devices.
+- Clean layout with modern interaction patterns.
+- Accessible components built with Radix primitives.
+- Smooth transitions, date pickers, and user-friendly forms.
+
+---
+
+## Tech Stack
+
+- Framework: Next.js 14  
+- Language: TypeScript  
+- Database: MongoDB with Mongoose  
+- Authentication: Clerk  
+- Payments: Stripe  
+- File Uploads: UploadThing  
+- Forms: React Hook Form  
+- Validation: Zod  
+- UI Layer: Tailwind CSS, Radix UI components, Lucide icons  
+- Date Selection: React Datepicker  
